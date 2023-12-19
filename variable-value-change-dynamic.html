@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+    <style>
+        :root{
+            --txt-color:#fff;
+        }
+        div.box1{
+padding: 20px;
+background-color: var(--txt-color);
+width: 90px;
+height: 90px;
+        }
+        li{
+            color:var(--txt-color);
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="box _red-color" onclick="myFunction()">
+        <ul>
+            <li>Home</li>
+            <div class="box1"></div>
+            <li>About</li>
+            <li>Service</li>
+            <li>Portgfolio</li>
+        </ul>
+    </div>
+    <script>
+       
+
+        window.onload = function() {
+            let mydiv = document.querySelector('.box');
+
+        if(mydiv.classList.contains('_blue-color')){
+    document.documentElement.style.cssText = "--txt-color: blue";
+        }
+
+        else if(mydiv.classList.contains('_red-color')){
+            document.documentElement.style.cssText = "--txt-color: red";
+        }
+
+        else if(mydiv.classList.contains('_yellow-color')){
+            document.documentElement.style.cssText = "--txt-color: yellow";
+        }
+
+        else if(mydiv.classList.contains('_brown-color')){
+            document.documentElement.style.cssText = "--txt-color: brown";
+        }
+
+        else{
+            document.documentElement.style.cssText = "--txt-color: #09421b";
+        }
+};
+    </script>
+</body>
+</html>
